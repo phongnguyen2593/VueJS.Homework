@@ -70,11 +70,14 @@
                         <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png" 
                             class="productImage"
                         >
-                        {{ product.name }}
+                        <p class="name">{{ product.name }}</p>
+                        <p class="price">{{ formatMoney(product.price) }} đ</p>
+                        
                     </td>
                     <td v-else class="productName">
                         <img :src="product.image" class="productImage">
-                        {{ product.name }}
+                        <p class="name">{{ product.name }}</p>
+                        <p class="price">{{ formatMoney(product.price) }} đ</p>
                     </td>
                     <td>
                         <input type="number" class="quantity" :value="product.quantity">
@@ -94,7 +97,7 @@
                 </div>
             </div>
             <div class="cartTotal">
-                <span>Tổng tiền: {{ total }} đ</span>
+                <span>Tổng tiền: {{ formatMoney(total) }} đ</span>
             </div>
         </div>
     </div>
@@ -218,25 +221,23 @@ export default {
                 return this.products;
             }
         },
-    },
 
-    watch: {
-        total () {
+        total: function () {
             let total = 0;  
             this.carts.forEach((item) => {
                 total = total + +item.quantity * item.price;
             });
             return total;
         },
-
+        
         formatString (string) {
              if(string.length > 25) {
-                 string = string.slice(0, 24) + '...';
+                return string.substr(0, 24) + '...';
              } else {
                 return string;
              }
         },
-    }
+    },
 }
 </script>
 
@@ -383,6 +384,16 @@ export default {
                         }
                         .quantity {
                             width: 30%;
+                        }
+                        .price {
+                            font-size: 14px;
+                            color: #9e949d;
+                            margin: 0;
+                        }
+                        .name {
+                            color: black;
+                            font-weight: bold;
+                            margin-bottom: 0;
                         }
                     }
                     
