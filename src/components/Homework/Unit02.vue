@@ -83,7 +83,7 @@
                         <input type="number" class="quantity" :value="product.quantity">
                     </td>
                     <td>
-                        <button class="btnRemove" @click="removeToCart(product)">Remove</button>
+                        <button class="btnRemove" @click="removeToCart(product.name)">Xóa</button>
                     </td>
                     
                 </tr>
@@ -200,9 +200,11 @@ export default {
             return Intl.NumberFormat().format(money);
         },
 
-         removeToCart: function (product) {
-             console.log(product);
-         }
+        removeToCart: function (name) {
+            this.carts = this.carts.filter((product) => {
+            return product.name != name;
+      });
+        }
     },
 
     computed: {
