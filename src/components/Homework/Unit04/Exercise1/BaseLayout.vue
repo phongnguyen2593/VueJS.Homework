@@ -39,8 +39,8 @@
                         <slot name="title"></slot>
                     </el-col>
                     <el-col :span="10" class="avatar">
-                        <i class="el-icon-bell"
-                            style="margin-right: 20px; font-size: 18px; margin-bottom: 20px">
+                        <i class="el-icon-bell">
+                            <div>12</div>
                         </i>
                         <el-dropdown>
                             <el-avatar :size="40" :src="circleUrl"></el-avatar>
@@ -97,9 +97,25 @@ export default {
                     .el-dropdown {
                         margin-top: 10px;
                     }
+                    i {
+                        position: relative;
+                        right:30px;
+                        bottom: 10px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        div {
+                            position: absolute;
+                            font-size: 12px;
+                            background-color: #F56C6C;
+                            padding: 3px 5px;
+                            color: #fff;
+                            border-radius: 20px;
+                            bottom:12px;
+                            left: 11px;
+                        }
+                    }
                 }
             }
-
         }
         
         .el-aside {
