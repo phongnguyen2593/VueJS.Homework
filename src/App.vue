@@ -6,9 +6,11 @@
     
     <!-- Start Homework Unit 3 -->
     <!-- <Todo /> -->
-    <Exercise />
+    <!-- <Exercise /> -->
     <!-- End Homework Unit 3 -->
 
+    <ProductPage />
+    <NewsDetailPage />
   </div>
 </template>
 
@@ -16,8 +18,11 @@
 // import HomeworkUnit02 from './components/Homework/Unit02.vue'
 
 // import Todo from './components/Homework/Unit03/Exercise01/Todo.vue'
-import Exercise from './components/Homework/Unit03/Exercise02/Exercise.vue'
+// import Exercise from './components/Homework/Unit03/Exercise02/Exercise.vue'
 
+// Homework Unit04
+import ProductPage from './components/Homework/Unit04/Exercise1/ProductPage.vue'
+import NewsDetailPage from './components/Homework/Unit04/Exercise2/NewsDetailPage.vue'
 export default {
   name: 'App',
   components: {
@@ -25,8 +30,11 @@ export default {
 
     // Unit 3
     // Todo,
-    Exercise
+    // Exercise
 
+    // Homework Unit 4
+    ProductPage,
+    NewsDetailPage
   }
 }
 </script>
@@ -43,8 +51,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
-
   }
 // }
 </style>
