@@ -7,8 +7,7 @@
             <el-main>
                 <el-table 
                     :data="tableData"
-                    border
-                    style="border: 1px solid black">
+                    border>
                     <el-table-column prop="date" label="Date" width="140">
                     </el-table-column>
                     <el-table-column prop="name" label="Name" width="120">

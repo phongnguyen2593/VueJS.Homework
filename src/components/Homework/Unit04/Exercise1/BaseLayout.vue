@@ -42,13 +42,13 @@
                         <i class="el-icon-bell">
                             <div>12</div>
                         </i>
-                        <el-dropdown>
+                        <el-dropdown >
                             <el-avatar :size="40" :src="circleUrl"></el-avatar>
-                            <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-menu slot="dropdown" style="margin: 0; top: 70px !important">
                                 <el-dropdown-item>Thông tin tài khoản</el-dropdown-item>
                                 <el-dropdown-item>Đổi mật khẩu</el-dropdown-item>
                                 <el-dropdown-item>Cấu hình</el-dropdown-item>
-                                <el-dropdown-item>Đăng xuất</el-dropdown-item>
+                                <el-dropdown-item style="border-top: 1px solid #F1F3F8">Đăng xuất</el-dropdown-item>
                             </el-dropdown-menu>
                         </el-dropdown>
                     </el-col>
