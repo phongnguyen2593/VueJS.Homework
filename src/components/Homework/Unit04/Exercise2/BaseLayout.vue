@@ -2,7 +2,7 @@
     <el-row :gutter="24">
         <el-col :span="24">
             <slot name="banner"></slot>
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+            <el-menu :default-active="activeIndex" class="el-menu-demo block" mode="horizontal" @select="handleSelect">
                 <el-menu-item index="1">Trang chủ</el-menu-item>
                 <el-submenu index="2">
                     <template slot="title">Thể thao</template>
@@ -24,7 +24,7 @@
                 <el-menu-item index="8">Công nghệ</el-menu-item>
                 <el-menu-item index="9">Giải trí</el-menu-item>
             </el-menu>
-            <el-row :gutter="24">
+            <el-row :gutter="24" style="box-sizing: border-box; padding-top: 5px">
                 <el-col :span="6">
                     <slot name="adsLeft"></slot>
                 </el-col>
